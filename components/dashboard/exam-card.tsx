@@ -60,7 +60,7 @@ const ExamCard: React.FC<ExamCardProps> = ({ exam, loadingBarRef }) => {
               color="text.secondary"
               gutterBottom
             >
-              ID: {exam?._id}
+              ID: {exam?.id}
             </Typography>
           </Stack>
 
@@ -106,7 +106,7 @@ const ExamCard: React.FC<ExamCardProps> = ({ exam, loadingBarRef }) => {
           </List>
         </CardContent>
         <CardActions>
-          <Link href={`/exam/${exam._id}`}>
+          <Link href={`/exam/${exam.id}`}>
             <Button
               size="small"
               variant="contained"

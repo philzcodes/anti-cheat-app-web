@@ -16,7 +16,7 @@ A platform that aims to stop cheating in online exams with the power of AI and M
 
   
 
-This is the web version of my [Anti-Cheat Exam App](https://github.com/prathamesh-mutkure/anti-cheat-exam-app) with enhanced features, UI/UX, and performance.
+This is the web version of a [Anti-Cheat Exam App] with enhanced features, UI/UX, and performance.
 
   
 
@@ -37,11 +37,7 @@ This is the web version of my [Anti-Cheat Exam App](https://github.com/prathames
   - [Exam](#exam)
   - [Face Detection](#face)
 
-- [Tech Stack](#tech-stack)
-  - [Front-end](#frontend)
-  - [Backend](#backend)
-  - [Mobile App](#mobile)
-  - [Other Tools](#other)
+
 
 - [Important Points](#imp-points)
 - [Getting Started Instructions](#instructions)
@@ -56,9 +52,6 @@ This is the web version of my [Anti-Cheat Exam App](https://github.com/prathames
 
 ## Features and Interfaces
 
-  
-
-I'm currently making some final changes to the web app and will soon update this document with the latest demo images of the web app.
 
 
 
@@ -161,7 +154,19 @@ I'm currently making some final changes to the web app and will soon update this
 
   
 
-1. First setup the backend by following the instructions in this [repository](https://github.com/prathamesh-mutkure/anti-cheat-app-backend)
+1. First setup the backend by following the instructions:
+a. Install node modules
+i. npm install
+
+b. Create a .env file and set the following variables
+i. DB_URL
+ii. PORT (optional)
+
+c. Run the app
+i. npm start
+ii. nodemon app.js to test changes
+
+d. The backend should now run on localhost with default 8000 or specified port
 
 2. The test username and password are given in the login form
 

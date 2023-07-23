@@ -33,21 +33,21 @@ const Footer: React.FC<FooterProps> = () => {
       <footer>
         <Container className={classes.items}>
           <Grid container justifyContent="space-evenly" rowSpacing={5}>
-            {footerLinks.map((link, i) => (
+            {/* {footerLinks.map((link, i) => (
               <Link href={link.link} key={i}>
                 <Grid item>
                   <h3>{link.label}</h3>
                 </Grid>
               </Link>
-            ))}
+            ))} */}
           </Grid>
         </Container>
 
         <div className={classes.copyright}>
           <p>
             Developed by{" "}
-            <a href="https://prathamesh.co" target="_blank" rel="noreferrer">
-              Prathamesh Mutkure
+            <a href="" target="_blank" rel="noreferrer">
+              Me
             </a>{" "}
             &#169; {new Date().getFullYear()}
           </p>
