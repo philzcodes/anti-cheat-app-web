@@ -78,6 +78,9 @@ const submitExam = async (
 
     const res = await fetch(`${BASE_URL}/admin/submitExam/${studentId}`, {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ examId, answers }),
     });
 
