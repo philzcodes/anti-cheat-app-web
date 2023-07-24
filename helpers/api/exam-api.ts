@@ -90,7 +90,9 @@ const getAssignedExams = async (userId: string, token: string) => {
   // }
 
   try {
-    const res = await fetch("http://localhost:8080/exams");
+    const res = await fetch(
+      "https://anti-cheat-app-backend.onrender.com/exams"
+    );
 
     const data = await res.json();
 
