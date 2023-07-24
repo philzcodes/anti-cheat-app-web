@@ -19,7 +19,7 @@ const getExam = async (studentId: string, examId: string, token: string) => {
   //   throw e;
   // }
   try {
-    const res = await fetch(`http://localhost:8080/exams/${examId}`);
+    const res = await fetch(`http://localhost:8080/exams/${examId}/questions`);
 
     const data = await res.json();
 
@@ -27,7 +27,19 @@ const getExam = async (studentId: string, examId: string, token: string) => {
       throw new Error(data.err || "Failed to get exam from server!");
     }
 
-    return data;
+    const res1 = await fetch(`http://localhost:8080/exams/${examId}`);
+
+    const data1 = await res1.json();
+
+    return {
+      _id: data1._embedded.exams.id,
+      name: data1._embedded.exams.name,
+      startDate: data1._embedded.exams.startDate,
+      endDate: data1._embedded.exams.endDate,
+      duration: data1._embedded.exams.duration,
+      questionCount: data1._embedded.exams.questionCount,
+      questions: data._embedded.questions,
+    };
   } catch (e) {
     throw e;
   }

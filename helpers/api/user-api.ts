@@ -29,9 +29,16 @@ const getUser = async (id: string, password: string) => {
   // }
 
   try {
+    const credentials = {
+      id: id,
+      password: password,
+    };
     const res = await fetch(`${BASE_URL}/login`, {
       method: "POST",
-      body: JSON.stringify({ id, password }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(credentials),
     });
 
     const data = await res.json();
@@ -69,7 +76,7 @@ const submitExam = async (
     //   },
     // });
 
-    const res = await fetch(`${BASE_URL}/submitExam/${studentId}`, {
+    const res = await fetch(`${BASE_URL}/admin/submitExam/${studentId}`, {
       method: "POST",
       body: JSON.stringify({ examId, answers }),
     });
