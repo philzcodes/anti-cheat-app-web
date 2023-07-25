@@ -36,7 +36,10 @@ const QuestionWidget: React.FC<QuestionWidgetProp> = () => {
     val: string
   ) => {
     dispatch(
-      examActions.setAnswer({ questionNo: currentQuestion, answerKey: val })
+      examActions.setAnswer({
+        questionNo: currentQuestion,
+        answerKey: val,
+      })
     );
   };
 

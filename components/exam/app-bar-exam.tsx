@@ -30,12 +30,12 @@ const AppBarExam: React.FC<AppBarExamProps> = ({ examName, loadingBarRef }) => {
     loadingBarRef.current.continuousStart(50);
 
     try {
-      // const result = await submitExam(
-      //   session.data?.user.id,
-      //   activeExam.exam._id,
-      //   activeExam.answerKeys,
-      //   session.data?.user.token
-      // );
+      const result = await submitExam(
+        session.data?.user.id,
+        activeExam.exam._id,
+        activeExam.answerKeys,
+        session.data?.user.token
+      );
 
       router.replace("/dashboard");
     } catch (e) {
